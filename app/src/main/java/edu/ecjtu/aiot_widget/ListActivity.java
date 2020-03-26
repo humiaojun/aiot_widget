@@ -1,5 +1,6 @@
 package edu.ecjtu.aiot_widget;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -78,10 +79,16 @@ public class ListActivity extends AppCompatActivity {
                 ContactInfo info = new ContactInfo();
                 info.setName(editName.getText().toString());
                 info.setTele(editTele.getYear()+"-"+(editTele.getMonth()+1)+"-"+editTele.getDayOfMonth());
-                contacList.add(info);
-                Collections.sort(contacList);
-                adapter.notifyDataSetChanged();
+//                contacList.add(info);
+//                Collections.sort(contacList);
+//                adapter.notifyDataSetChanged();
+                Intent intent = new Intent();
+                intent.putExtra("ContactInfo",info);
                 editName.setText("");
+                setResult(0000,intent);
+//                startActivityForResult();
+                finish();
+//                startActivity(intent);
             }
         });
 

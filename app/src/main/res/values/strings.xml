@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">aiot_widget</string>
+    <string name="app_name">备忘录</string>
     <string name="hint">你点击了__次</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
