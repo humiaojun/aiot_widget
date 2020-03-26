@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/edit_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:max="100"
+        />
+    <Button
+        android:id="@+id/reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="减少"
+        app:layout_constraintTop_toBottomOf="@id/edit_progressbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加"
+        app:layout_constraintTop_toBottomOf="@id/edit_progressbar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="20dp"
+        />
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认修改"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/reduce"
+        app:layout_constraintTop_toBottomOf="@+id/reduce"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
